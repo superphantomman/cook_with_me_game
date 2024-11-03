@@ -3,6 +3,7 @@ package org.game;
 import java.util.List;
 import java.util.Map;
 
+//TODO Complete Statistics
 public class Statistics{
     List<String> nicks;
     Map<String, Player> players;

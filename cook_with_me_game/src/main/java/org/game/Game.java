@@ -16,33 +16,53 @@ public class Game {
     public Game(List<String> nicks, int prize, int numberOfRounds) {
         this.nicks = nicks;
         this.prizePerRound = prize;
-        this.numberOfRounds = numberOfRounds;
+        if (numberOfRounds > 0)
+            this.numberOfRounds = numberOfRounds;
         this.budgetPerPlayer = GameUtils.calculateBudgetPerPlayer(numberOfRounds);
         for (var nick : nicks) {
-            players.put(nick, new Player(budgetPerPlayer, 0, 0));
+            players.put(nick, new Player(nick,budgetPerPlayer, 0, 0));
         }
     }
 
     public Statistics playTheGame() {
         final Statistics statistics = new Statistics(nicks, players);
         for (int round = 0; round < numberOfRounds; round++) {
-            String winner = playTheRound();
-            givePrice(players.get(winner));
-            notifyLosers(winner);
+            List<String> winners = playTheRound(round);
+            givePrice(winners);
         }
         return statistics;
     }
 
-    public String playTheRound() {
-        return new String(); // winner
+    public List<String> playTheRound(int round) {
+
+        //Players compose their meals
+        final Map<String, Meal> meals = new HashMap<>();
+        for (final var nick : nicks){
+            final Player p = players.get(nick);
+            meals.put(nick, p.composeMeal(products));
+        }
+
+        // Voting for a meal
+        final Map<String, Integer> votes = new HashMap<>();
+        nicks.forEach( n -> votes.put(n, 0)); // initialize votes placeholders
+
+        for (final var n : nicks){
+            final Player p = players.get(n);
+            String voteForPlayer = p.voteForMeal(nicks, meals);
+            votes.put(n, votes.get(n) + 1);
+        }
+
+        return GameUtils.findWinners(nicks,votes); // winner
     }
 
-    public void givePrice(Player player) {
+    public void givePrice(List<String> winners) {
+        for (final var winner: winners){
+            Player player = players.get(winner);
+            player.increaseBudget(prizePerRound);
+            player.increaseScore(prizePerRound);
+        }
 
     }
 
-    public void notifyLosers(String winner) {
-
-    }
 
 }
