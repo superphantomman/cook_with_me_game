@@ -15,12 +15,22 @@ public class Meal {
         this.name = name;
         this.products = products;
         this.instructions = instructions;
-        //Fill it
-        this.mealInformation = "";
+        this.mealInformation = initializeMealInformation();
     }
 
-    public String getMealInformation(){
-        return "";
+    public String initializeMealInformation() {
+        StringBuilder sb = new StringBuilder(name + "\n");
+        sb.append("\tProducts: ");
+        for (final var p : products) {
+            sb.append(p);
+            sb.append(", ");
+        }
+        sb.append("\n\tInstructions:");
+        for (final var i : instructions){
+            sb.append("\n\t\t");
+            sb.append(i);
+        }
+        return sb.toString();
     }
 
     @Override

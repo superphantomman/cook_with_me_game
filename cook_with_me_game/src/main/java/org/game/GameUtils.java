@@ -8,7 +8,7 @@ public class GameUtils {
     }
 
     public static List<String> findWinners( List<String> nicks,Map<String, Integer> votes){
-        Deque<String> winners = new ArrayDeque<>();
+        final Deque<String> winners = new ArrayDeque<>(nicks.size());
         int maxVal = 0;
         for (final var n : nicks){
             final int voteForPlayer = votes.get(n);

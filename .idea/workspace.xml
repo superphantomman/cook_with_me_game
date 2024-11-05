@@ -6,10 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="67aa179c-3d4a-442a-9e1d-0767173feba0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cook_with_me_game/.idea/cody_history.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cook_with_me_game/.idea/cody_history.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cook_with_me_game/src/main/java/org/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/cook_with_me_game/src/main/java/org/game/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cook_with_me_game/src/main/java/org/game/GameUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/cook_with_me_game/src/main/java/org/game/GameUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cook_with_me_game/src/main/java/org/game/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/cook_with_me_game/src/main/java/org/game/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cook_with_me_game/src/main/java/org/game/Meal.java" beforeDir="false" afterPath="$PROJECT_DIR$/cook_with_me_game/src/main/java/org/game/Meal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cook_with_me_game/src/main/java/org/game/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/cook_with_me_game/src/main/java/org/game/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cook_with_me_game/src/main/java/org/game/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cook_with_me_game/src/main/java/org/game/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cook_with_me_game/src/main/java/org/game/Statistics.java" beforeDir="false" afterPath="$PROJECT_DIR$/cook_with_me_game/src/main/java/org/game/Statistics.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +40,9 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/cook_with_me_game/.idea/game/main.java" root0="FORCE_HIGHLIGHTING" />
   </component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -51,7 +57,7 @@
     <option name="delegateBuildToMaven" value="true" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
@@ -62,6 +68,8 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Maven.Main.executor": "Run",
+    "Maven.ProductController.executor": "Run",
     "Maven.Unknown [clean].executor": "Run",
     "Maven.Unknown [install].executor": "Run",
     "Maven.Unknown [validate].executor": "Run",
@@ -69,6 +77,7 @@
     "Maven.cook-with-me-game [org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile].executor": "Run",
     "Maven.cook-with-me-game [org.apache.maven.plugins:maven-install-plugin:3.1.2:help].executor": "Run",
     "Maven.cook-with-me-game [org.apache.maven.plugins:maven-install-plugin:3.1.2:install].executor": "Run",
+    "Maven.cook_with_me_game [install...].executor": "Run",
     "RunOnceActivity.CodyAccountHistoryMigration": "true",
     "RunOnceActivity.CodyAccountsIdsRefresh": "true",
     "RunOnceActivity.CodyAssignOrphanedChatsToActiveAccount": "true",
@@ -100,34 +109,32 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="Unknown" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
-      <MavenSettings>
-        <option name="myGeneralSettings" />
-        <option name="myRunnerSettings" />
-        <option name="myRunnerParameters">
-          <MavenRunnerParameters>
-            <option name="cmdOptions" />
-            <option name="profiles">
-              <set />
-            </option>
-            <option name="goals">
-              <list />
-            </option>
-            <option name="multimoduleDir" />
-            <option name="pomFileName" />
-            <option name="profilesMap">
-              <map />
-            </option>
-            <option name="projectsCmdOptionValues">
-              <list />
-            </option>
-            <option name="resolveToWorkspace" value="false" />
-            <option name="workingDirPath" value="$PROJECT_DIR$" />
-          </MavenRunnerParameters>
-        </option>
-      </MavenSettings>
-      <method v="2" />
+  <component name="RunManager" selected="Application.ProductController">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.game.Main" />
+      <module name="cook_with_me_game" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.game.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.game.ProductController" />
+      <module name="cook_with_me_game" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.game.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="Unknown" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
       <MavenSettings>
@@ -157,6 +164,40 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
+    <configuration name="Unknown" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="cmdOptions" />
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list />
+            </option>
+            <option name="multimoduleDir" />
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="projectsCmdOptionValues">
+              <list />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ProductController" />
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -178,12 +219,24 @@
       <workItem from="1730440869220" duration="108000" />
       <workItem from="1730440988671" duration="315000" />
       <workItem from="1730441397318" duration="240000" />
-      <workItem from="1730627924784" duration="3772000" />
+      <workItem from="1730627924784" duration="5636000" />
+      <workItem from="1730794151063" duration="7176000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
