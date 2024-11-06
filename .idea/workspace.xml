@@ -5,13 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="67aa179c-3d4a-442a-9e1d-0767173feba0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/cook_with_me_game/src/main/java/org/game/GameFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cook_with_me_game/src/main/java/org/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/cook_with_me_game/src/main/java/org/game/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cook_with_me_game/src/main/java/org/game/GameUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/cook_with_me_game/src/main/java/org/game/GameUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cook_with_me_game/src/main/java/org/game/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/cook_with_me_game/src/main/java/org/game/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cook_with_me_game/src/main/java/org/game/Meal.java" beforeDir="false" afterPath="$PROJECT_DIR$/cook_with_me_game/src/main/java/org/game/Meal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cook_with_me_game/src/main/java/org/game/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/cook_with_me_game/src/main/java/org/game/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cook_with_me_game/src/main/java/org/game/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cook_with_me_game/src/main/java/org/game/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cook_with_me_game/src/main/java/org/game/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cook_with_me_game/src/main/java/org/game/ProductsFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cook_with_me_game/src/main/java/org/game/Statistics.java" beforeDir="false" afterPath="$PROJECT_DIR$/cook_with_me_game/src/main/java/org/game/Statistics.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,6 +21,13 @@
   </component>
   <component name="CodyActiveAccount">
     <option name="activeAccountId" value="VXNlcjozNTEzMDU=" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -40,9 +47,9 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/cook_with_me_game/.idea/game/main.java" root0="FORCE_HIGHLIGHTING" />
   </component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -68,6 +75,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Maven.GameUtils.executor": "Debug",
     "Maven.Main.executor": "Run",
     "Maven.ProductController.executor": "Run",
     "Maven.Unknown [clean].executor": "Run",
@@ -109,7 +117,20 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ProductController">
+  <component name="RunManager" selected="Application.GameUtils">
+    <configuration name="GameUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.game.GameUtils" />
+      <module name="cook_with_me_game" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.game.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.game.Main" />
       <module name="cook_with_me_game" />
@@ -123,8 +144,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.game.ProductController" />
+    <configuration name="ProductsFactory" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.game.ProductsFactory" />
       <module name="cook_with_me_game" />
       <extension name="coverage">
         <pattern>
@@ -194,7 +215,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ProductController" />
+        <item itemvalue="Application.GameUtils" />
+        <item itemvalue="Application.ProductsFactory" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -220,7 +242,8 @@
       <workItem from="1730440988671" duration="315000" />
       <workItem from="1730441397318" duration="240000" />
       <workItem from="1730627924784" duration="5636000" />
-      <workItem from="1730794151063" duration="7176000" />
+      <workItem from="1730794151063" duration="8513000" />
+      <workItem from="1730870588709" duration="4317000" />
     </task>
     <servers />
   </component>

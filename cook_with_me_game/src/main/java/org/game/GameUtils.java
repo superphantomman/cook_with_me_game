@@ -3,16 +3,17 @@ package org.game;
 import java.util.*;
 
 public class GameUtils {
-    public static int calculateBudgetPerPlayer(int numberOfRounds ){
-        return numberOfRounds * ProductController.getMaxCost() * 3;
+    public static int calculateBudgetPerPlayer(int numberOfRounds) {
+        return numberOfRounds * ProductsFactory.getMaxCost() * 3;
     }
 
-    public static List<String> findWinners( List<String> nicks,Map<String, Integer> votes){
+    //Checked with main
+    public static List<String> findWinners(List<String> nicks, Map<String, Integer> votes) {
         final Deque<String> winners = new ArrayDeque<>(nicks.size());
         int maxVal = 0;
-        for (final var n : nicks){
+        for (final var n : nicks) {
             final int voteForPlayer = votes.get(n);
-            if (voteForPlayer > maxVal){
+            if (voteForPlayer > maxVal) {
                 maxVal = voteForPlayer;
                 winners.clear();
                 winners.add(n);
@@ -22,4 +23,6 @@ public class GameUtils {
         }
         return winners.stream().toList();
     }
+
+
 }

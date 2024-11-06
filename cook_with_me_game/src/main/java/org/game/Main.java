@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        Game game = new Game(List.of("Jack", "Emily", "Dave", "Jason"),200,2);
+        Game game = new Game(List.of("Jack", "Emily"),200,2);
         Statistics statistics = game.playTheGame();
         statistics.display();
     }

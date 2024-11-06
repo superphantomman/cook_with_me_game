@@ -24,13 +24,17 @@ public class Player {
 
 
         //List all products and theirs cost
-        String product = "none";
+        String product;
         List<String> chosenProducts = new ArrayList<>();
         final Set<String> productSet = products.keySet();
         System.out.println("Type none when you stop adding products");
         do {
             System.out.println("Enter your product: ");
-            product = scanner.next();
+            product = scanner.nextLine();
+
+            if (product.equals("none"))
+                continue;
+
             if (!productSet.contains(product)) {
                 System.out.println("Skipped because product is not in base. Try again passing new product");
                 continue;
@@ -41,22 +45,23 @@ public class Player {
                 continue;
             }
             this.budget -= prize;
-            if (!product.equals("none"))
-                chosenProducts.add(product);
+
+            chosenProducts.add(product);
         } while (!product.equals("none"));
 
         List<String> instructions = new ArrayList<>();
-        String instruction = "none";
+        String instruction;
         System.out.println("Type none when you stop adding instructions");
         do {
             System.out.println("Enter your instruction: ");
-            instruction = scanner.next();
-            if (!instruction.equals("none"))
-                instructions.add(product);
+            instruction = scanner.nextLine();
+            if (instruction.equals("none"))
+                continue;
+            instructions.add(instruction);
         } while (!instruction.equals("none"));
 
         System.out.println("Enter your meal name: ");
-        final String mealName = scanner.next();
+        final String mealName = scanner.nextLine();
 
         Meal meal = new Meal(mealName, chosenProducts, instructions);
         lastCreatedMeal = meal;
@@ -74,18 +79,19 @@ public class Player {
             if (n.equals(this.nick))
                 continue;
             System.out.println("Player: " + n);
-            System.out.println("Meal:");
+            System.out.println("Meal: " + meal.getName());
             System.out.println(meal);
         }
 
-        System.out.println("\n\n\n\n");
-        scanner.next();
+        System.out.println("\n\n");
+        System.out.println("Read menu and type enter when you finish.");
+        scanner.nextLine();
         for (int i = 0; i < allNicks.size(); i++) {
             final String n = allNicks.get(i);
             final Meal m = meals.get(n);
             if (n.equals(this.nick))
                 continue;
-            System.out.printf("Option: %d\nPlayer:%s\nMeal: %s\n\n\n", i, n, m);
+            System.out.printf("Option: %d\nPlayer:%s\nMeal: %s\n\n\n", i, n, m.getName());
         }
 
         System.out.println("Enter option number: ");

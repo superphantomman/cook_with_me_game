@@ -56,12 +56,12 @@ public class Statistics {
         System.out.println(determineWinners(players));
 
         for (int round = 0; round < rounds; round++) {
-            System.out.println("Meals of round " + round + "\t" + mealsOfRounds[round]);
+            System.out.println("Meals of round " + round + "\n" + mealsOfRounds[round]);
         }
 
         System.out.println("Meals of each player:\n");
         for (final var nick : nicks){
-            System.out.println("Meals of player " + nick + "\t" + mealsOfPlayers.get(nick));
+            System.out.println("Meals of player " + nick + "\n" + mealsOfPlayers.get(nick).stream().map(Meal::getName).toList());
         }
     }
 }

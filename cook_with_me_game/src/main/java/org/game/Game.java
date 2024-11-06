@@ -11,7 +11,7 @@ public class Game {
     private int numberOfRounds = 5;
     private final List<String> nicks;
 
-    private final Map<String, Integer> products = ProductController.intializeProducts();
+    private final Map<String, Integer> products = ProductsFactory.intializeProducts();
 
     //Checked
     public Game(List<String> nicks, int prize, int numberOfRounds) {
@@ -54,11 +54,13 @@ public class Game {
         for (final var n : nicks){
             final Player p = players.get(n);
             String voteForPlayer = p.voteForMeal(nicks, mealsPlayer);
+            System.out.println("Player " + n + " voted for " + voteForPlayer);
             votes.put(voteForPlayer, votes.get(n) + 1);
         }
         List<String> winners = GameUtils.findWinners(nicks, votes);
 
         statistics.noteRound(round, winners, mealsOfRound, mealsPlayer);
+        System.out.println("Winners of round " + round + " are " + winners);
         return winners; // winner
     }
 

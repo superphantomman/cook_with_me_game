@@ -4,8 +4,8 @@ import java.io.*;
 import java.util.HashMap;
 import java.util.Map;
 
-//TODO complete ProductController
-public class ProductController {
+//TODO complete ProductsFactory
+public class ProductsFactory {
     private static String filePath = "items.csv";
 
     public static Map<String, Integer> intializeProducts() {
